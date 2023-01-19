@@ -1,0 +1,349 @@
+@font-face {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Segoe UI'), url('./fonts/Segoe UI.woff') format('woff');
+}
+    
+
+.hidden--menu--block{
+    height: 150px;
+    width: 100%;
+}
+.contect{
+    margin-top: 45px;
+    &__breadcrumb{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        p{
+            font-family: 'Segoe UI';
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #1D1C20;
+        }
+    }
+
+    .product--text--title{
+        display: none;
+    }
+
+    .product{
+        width: 100%;
+        display: flex;
+        gap: 30px;
+        margin-top: 60px;
+        &__img{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 16px;
+            width: 50%;
+            .product--img--main{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.1));
+                border-radius: 20px;
+                height: 360px;
+                min-width: 330px;
+            }
+
+            .product--img--childs{
+                display: flex;
+                width: 100%;
+                gap: 15px;
+                & > div{
+                    width: calc(100% / 3);
+                    height: 150px;
+                    overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.1));
+                    border-radius: 20px;
+                    cursor: pointer;
+                    @media screen and (max-width: 850px){
+                        height: 110px;
+                    }
+                }
+            }
+        }
+
+        &__text{
+            width: 50%;
+            font-family: 'Segoe UI';
+            &__header{
+                h2{
+                    font-weight: 600;
+                    font-size: 36px;
+                    line-height: 24px;
+                    color: #060606;
+                    margin-bottom: 7px;
+                    @media screen and (max-width: 850px){
+                        font-size: 30px
+                    }
+                }
+                span{
+                    font-weight: 400;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: #85888A;
+                }
+            }
+
+            &__info-one{
+                margin-top: 45px;
+                h3{
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: var(--redColor);
+                }
+                p{
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 30px;
+                    color: #1D1C20;
+                    margin-top: 16px;
+                }
+            }
+
+            &__info-two{
+                margin: 40px 0 32px;
+                h3{
+                    font-weight: 600;
+                    font-size: 20px;
+                    line-height: 24px;
+                    color: var(--redColor);
+                }
+                ul{
+                    list-style: none;
+                    margin-top: 16px;
+                    li{
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 24px;
+                        color: #1D1C20;
+                    }
+                }
+            }
+
+            button{
+                font-family: 'Segoe UI';
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 100%;
+                color: #fff;
+                border-radius: 8px;
+                background-color: var(--redColor);
+                padding: 12px 24px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .slider{
+        font-family: 'Segoe UI';
+        margin-top: 95px;
+        h2{
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 100%;
+            color: var(--redColor);
+        }
+        &__items{
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+            margin-top: 30px;
+            @media screen and (max-width: 1050px){
+                overflow-x: scroll;
+            }
+            ::-webkit-scrollbar-thumb{
+                height: 4px;
+                background-color: tan;
+            }
+            & > a{
+                min-width: 250px;
+                width: calc(100% / 4);
+                height: 300px;
+                border-radius: 20px;
+                overflow: hidden;
+                position: relative;
+                text-decoration: none;
+                filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.1));
+                img{
+                    width: 100%;
+                }
+                @media screen and (max-width: 1050px){
+                    height: 250px;
+                }
+                & > div{
+                    position: absolute;
+                    bottom: 0;
+                    background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.867037) 13.3%, rgba(0, 0, 0, 0.8) 26%, rgba(0, 0, 0, 0.6) 51.4%, rgba(0, 0, 0, 0.38) 68.87%, rgba(0, 0, 0, 0.152572) 84.74%, rgba(0, 0, 0, 0) 100%);
+                    width: 100%;
+                    height: 50%;
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 24px 20px;
+                    p{
+                        font-weight: 400;
+                        font-size: 24px;
+                        line-height: 24px;
+                        color: #F5F5F5;
+                    }
+                }
+            }
+        }
+
+        .pagination{
+            display: flex;
+            align-items: center;
+            // width: 100%;
+            float: right;
+            gap: 40px;
+            margin-top: 20px;
+            &__number{
+                display: flex;
+                align-items: center;
+                gap: 6px;
+                p{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    &:first-child{
+                        color: #1D1C20;
+                    }
+                    &:last-child{
+                        color: #B0AFB3;
+                    }
+                }
+                span{
+                    background: #1D1C20;
+                    width: 1px;
+                    height: 16px;
+                }
+            }
+
+            &__btn{
+                display: flex;
+                align-items: center;
+                gap: 25px;
+                button{
+                    background: transparent;
+                    border: none;
+                    cursor: pointer;
+                }
+            }
+            @media screen and (max-width: 1050px){
+                display: none;
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .hidden--menu--block{
+        height: 50px;
+    }
+
+    .contect__breadcrumb{
+        display: none;
+    }
+
+    .product--text--title{
+        display: block !important;
+        font-family: 'Segoe UI';
+        h2{
+            color: #060606;
+            margin-bottom: 4px;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 24px;
+        }
+        span{
+            font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+            color: #85888A;
+        }
+    }
+
+    .contect .product{
+        margin-top: 0;
+        gap: 16px;
+        &__text{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        &__text__header{
+            display: none;
+        }
+        &__text__info-one, &__text__info-two{
+            margin-top: 0;
+            margin-bottom: 0;
+            h3{
+                font-size: 18px;
+            }
+            p, ul{
+                font-size: 16px;
+                margin-top: 8px;
+            }
+            li{
+                font-size: 16px !important;
+            }
+        }
+        &--img--main{
+            height: 320px !important;
+            min-width: auto !important;
+        }
+        &--img--childs {
+            gap: 6px !important;
+            & > div{
+                height: 100px !important;
+            }
+        }
+        &__img{
+            gap: 6px;
+        }
+    }
+
+    .slider{
+        h2{
+            font-size: 20px !important;
+        }
+        &--frist{
+            margin-top: 65px;
+        }
+        &--second{
+            margin-top: 50px !important;
+        }
+        &--items--item{
+            width: 200px !important;
+            height: 215px !important;
+        }
+    } 
+}
+
+@media screen and (max-width: 650px){
+    .product{
+        margin-top: 16px !important;
+        flex-direction: column;
+        & > div{
+            width: 100% !important;
+        }
+        &__img{
+            gap: 8px !important;
+        }
+    }
+}
